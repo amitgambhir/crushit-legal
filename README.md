@@ -1,6 +1,6 @@
 **CrushIt**
 
-**Privacy Policy**
+**Privacy Policy (DRAFT)**
 
 _Effective Date: March 23, 2026_
 
