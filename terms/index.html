@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CrushIt — Terms of Service</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Nunito:wght@700;800&display=swap');
+
+  :root {
+    --bg: #0F0F0F;
+    --surface: #1C1C1C;
+    --surface2: #2A2A2A;
+    --text: #FFFFFF;
+    --text-secondary: #C8C8C8;
+    --muted: #9E9E9E;
+    --accent: #FF5722;
+    --accent-glow: rgba(255, 87, 34, 0.15);
+    --yellow: #FFD600;
+    --green: #00C853;
+    --border: #333333;
+    --radius: 16px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg);
+    color: var(--text-secondary);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(180deg, rgba(255,87,34,0.08) 0%, transparent 100%);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero-icon {
+    width: 72px;
+    height: 72px;
+    background: var(--accent);
+    border-radius: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(255,87,34,0.3);
+  }
+
+  .hero h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 2.25rem;
+    color: var(--text);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .subtitle {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+
+  .hero .effective {
+    display: inline-block;
+    background: var(--surface);
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-top: 12px;
+    border: 1px solid var(--border);
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+  }
+
+  /* Summary banner */
+  .summary {
+    background: var(--accent-glow);
+    border: 1px solid rgba(255,87,34,0.25);
+    border-radius: var(--radius);
+    padding: 24px 28px;
+    margin-bottom: 40px;
+  }
+
+  .summary h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .summary p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+  }
+
+  /* Section cards */
+  .section {
+    margin-bottom: 28px;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+
+  .section-number {
+    background: var(--surface2);
+    color: var(--accent);
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .section h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--text);
+  }
+
+  .section-body {
+    background: var(--surface);
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    border: 1px solid var(--border);
+  }
+
+  .section-body p {
+    margin-bottom: 10px;
+    font-size: 0.925rem;
+  }
+
+  .section-body p:last-child { margin-bottom: 0; }
+
+  .section-body ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 10px;
+  }
+
+  .section-body ul:last-child { margin-bottom: 0; }
+
+  .section-body li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 5px;
+    font-size: 0.925rem;
+  }
+
+  .section-body li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  strong { color: var(--text); font-weight: 600; }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,87,34,0.3);
+    transition: border-color 0.2s;
+  }
+
+  a:hover { border-color: var(--accent); }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+
+  .footer-links {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .footer-links a {
+    color: var(--muted);
+    border-bottom: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .footer-links a:hover { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-icon">&#x1F4DC;</div>
+  <h1>Terms of Service</h1>
+  <p class="subtitle">Crush tasks. Earn rewards. Repeat.</p>
+  <span class="effective">Effective March 24, 2026</span>
+</div>
+
+<div class="container">
+
+  <!-- Summary -->
+  <div class="summary">
+    <h2>The short version</h2>
+    <p>CrushIt is a family app where parents create tasks and kids earn points. These terms explain what you can expect from us and what we expect from you. Be kind, be honest, and have fun crushing it.</p>
+  </div>
+
+  <!-- 1 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">1</div>
+      <h2>Who We Are</h2>
+    </div>
+    <div class="section-body">
+      <p>CrushIt is a family task and reward application developed by <strong>Amit Gambhir</strong>. These Terms of Service ("Terms") govern your use of the CrushIt mobile application ("App") and any related services.</p>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">2</div>
+      <h2>Accepting These Terms</h2>
+    </div>
+    <div class="section-body">
+      <p>By creating an account or using the App, you agree to these Terms and our <a href="https://amitgambhir.github.io/crushit-legal/">Privacy Policy</a>. If you do not agree, do not use the App.</p>
+      <p>Parents or legal guardians ("Parents") accept these Terms on behalf of themselves and any child profiles ("Kids") they create within their family account.</p>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">3</div>
+      <h2>Eligibility</h2>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li><strong>Parents:</strong> You must be at least 18 years old to create a parent account.</li>
+        <li><strong>Kids:</strong> Child profiles are created and managed by Parents. Children under 13 may only use the App through a parent-managed profile, in compliance with COPPA.</li>
+        <li>Kids cannot create accounts independently.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">4</div>
+      <h2>Accounts &amp; Security</h2>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
+        <li>Parents are responsible for all activity under their family account, including kid profiles.</li>
+        <li>Kid accounts use a username and PIN managed by the parent. PINs are stored as bcrypt hashes &mdash; we never see them in plaintext.</li>
+        <li>Notify us immediately at <a href="mailto:privacy@crushitapp.com">privacy@crushitapp.com</a> if you suspect unauthorized access.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">5</div>
+      <h2>How the App Works</h2>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li>Parents create tasks and assign point values.</li>
+        <li>Kids complete tasks and submit them for parent approval.</li>
+        <li>Approved tasks award "Crush Points" that kids can redeem for parent-defined rewards.</li>
+        <li>Points, levels, streaks, and achievements are for in-app use only. They have no monetary value and cannot be transferred, sold, or exchanged outside the App.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">6</div>
+      <h2>Acceptable Use</h2>
+    </div>
+    <div class="section-body">
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the App for any unlawful purpose.</li>
+        <li>Attempt to manipulate points, levels, or rewards through unauthorized means.</li>
+        <li>Reverse-engineer, decompile, or attempt to extract the source code of the App.</li>
+        <li>Harass, abuse, or harm other users.</li>
+        <li>Upload content that is illegal, harmful, or inappropriate for children.</li>
+        <li>Use automated scripts, bots, or scrapers to access the App.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">7</div>
+      <h2>Content &amp; Photos</h2>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li>Parents and kids may upload photos as proof of completed tasks.</li>
+        <li>You retain ownership of any photos you upload. By uploading, you grant CrushIt a limited license to store and display the photo within your family account for task verification purposes only.</li>
+        <li>Photos are stored with time-limited signed URLs and are not publicly accessible.</li>
+        <li>We do not use uploaded photos for advertising, training, or any purpose beyond task verification.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">8</div>
+      <h2>Privacy &amp; Children's Data</h2>
+    </div>
+    <div class="section-body">
+      <p>Your privacy is important to us. Please review our <a href="https://amitgambhir.github.io/crushit-legal/">Privacy Policy</a> for full details on how we collect, use, and protect your data.</p>
+      <ul>
+        <li>We comply with COPPA (Children's Online Privacy Protection Act) and GDPR where applicable.</li>
+        <li>We do not sell personal data. Ever.</li>
+        <li>We do not show advertisements to children.</li>
+        <li>Each family's data is isolated &mdash; families cannot see each other's information.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">9</div>
+      <h2>Intellectual Property</h2>
+    </div>
+    <div class="section-body">
+      <p>The App, including its design, code, graphics, and content (excluding user-uploaded content), is owned by Amit Gambhir and protected by applicable intellectual property laws. You may not copy, modify, or distribute any part of the App without written permission.</p>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">10</div>
+      <h2>Availability &amp; Changes</h2>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li>We aim to keep the App available but do not guarantee uninterrupted access. Maintenance, updates, or unforeseen issues may cause temporary downtime.</li>
+        <li>We may update the App's features at any time. We'll do our best to notify you of significant changes.</li>
+        <li>We reserve the right to suspend or terminate accounts that violate these Terms.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">11</div>
+      <h2>Termination &amp; Data Deletion</h2>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li>You may delete your family account at any time through <strong>Settings &rarr; Delete Family Account</strong>.</li>
+        <li>Account deletion removes all family data (parent profile, kid profiles, tasks, rewards, points) within 30 days. Backups are purged within 90 days.</li>
+        <li>You may also export all your family data as JSON before deleting, via <strong>Settings &rarr; Export Data</strong>.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">12</div>
+      <h2>Disclaimers</h2>
+    </div>
+    <div class="section-body">
+      <p>The App is provided "as is" and "as available" without warranties of any kind, express or implied. We do not warrant that the App will be error-free or that defects will be corrected.</p>
+      <p>Crush Points and rewards are managed entirely within families. CrushIt is not responsible for fulfillment of real-world rewards &mdash; that is between parents and kids.</p>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">13</div>
+      <h2>Limitation of Liability</h2>
+    </div>
+    <div class="section-body">
+      <p>To the maximum extent permitted by law, Amit Gambhir shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the App, including but not limited to loss of data, loss of goodwill, or device damage.</p>
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">14</div>
+      <h2>Governing Law</h2>
+    </div>
+    <div class="section-body">
+      <p>These Terms are governed by and construed in accordance with the laws of the United States and the State of California, without regard to conflict of law principles.</p>
+    </div>
+  </div>
+
+  <!-- 15 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">15</div>
+      <h2>Changes to These Terms</h2>
+    </div>
+    <div class="section-body">
+      <p>We may update these Terms from time to time. When we do, we will revise the effective date at the top and notify you through the App. Continued use after changes constitutes acceptance of the revised Terms.</p>
+    </div>
+  </div>
+
+  <!-- 16 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-number">16</div>
+      <h2>Contact Us</h2>
+    </div>
+    <div class="section-body">
+      <p>Questions about these Terms? Reach out:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:privacy@crushitapp.com">privacy@crushitapp.com</a></li>
+        <li><strong>Developer:</strong> Amit Gambhir</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>&copy; 2026 CrushIt. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="https://amitgambhir.github.io/crushit-legal/">Privacy Policy</a>
+    <a href="https://amitgambhir.github.io/crushit-legal/terms">Terms of Service</a>
+  </div>
+</div>
+
+</body>
+</html>
